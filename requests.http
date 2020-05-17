@@ -1,0 +1,22 @@
+# Tests with REST Client Extension VSCode
+
+### Root
+GET http://0.0.0.0:8080/
+
+### Get Toto List
+GET http://0.0.0.0:8080/todos
+
+### Get Todo item
+GET http://0.0.0.0:8080/todos/af04551d-5a2d-4438-8d0d-ee3320189e17
+
+### Get Todo item (not found)
+GET http://0.0.0.0:8080/todos/af01d-5a2d-4438-8d0d-ee3320189e17
+
+### Update Todo item
+PUT http://0.0.0.0:8080/todos/af04551d-5a2d-4438-8d0d-ee3320189e17
+Content-Type: application/json
+
+{
+    "text": "Bar",
+    "done": true
+}
