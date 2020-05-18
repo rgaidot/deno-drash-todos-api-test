@@ -1,11 +1,11 @@
 import { Drash } from "https://deno.land/x/drash/mod.ts";
 
 import { Root } from "./resources/root.ts";
-import { TodosList, TodosItem } from "./resources/todos.ts";
+import { TodosItem, TodosList } from "./resources/todos.ts";
 
 const server = new Drash.Http.Server({
   response_output: "application/json",
-  resources: [Root, TodosList, TodosItem],
+  resources: [TodosItem, TodosList, Root],
   logger: new Drash.CoreLoggers.ConsoleLogger({
     enabled: true,
     level: "all",
